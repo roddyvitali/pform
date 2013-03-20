@@ -1,15 +1,15 @@
 
 Ext.Loader.setConfig({enabled: true});
-Ext.Loader.setPath('ExtMVC', '/js/');
+Ext.Loader.setPath('PForm', '/js/');
 Ext.application({
-    name: 'ExtMVC',
+    name: 'PForm',
     appFolder: 'js/app/',
     controllers: [
-        'Contatos'
+        'mantenedor.Pacientes'
     ],
     launch: function(){
     	Ext.QuickTips.init();
-        Ext.Loader.setPath('ExtMVC', '/js/');
+        Ext.Loader.setPath('PForm', '/js/');
     },
     autoCreateViewport: true
 });

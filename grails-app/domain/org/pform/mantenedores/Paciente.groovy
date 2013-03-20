@@ -14,8 +14,12 @@ class Paciente {
 	static hasMany = [patologias: String, telefonos: String]
 	
     static constraints = {
-		telefonos nullable: true
+		rut nullable: true
+		apellidoMaterno nullable: true
+		edad nullable: true
 		prevision nullable: true
+		telefonos nullable: true
+
 		patologias nullable: true
     }
 }
