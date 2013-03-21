@@ -5,7 +5,8 @@ Ext.application({
     name: 'PForm',
     appFolder: 'js/app/',
     controllers: [
-        'mantenedor.Pacientes'
+        'mantenedor.Pacientes',
+        'admin.ControlGeneral'
     ],
     launch: function(){
     	Ext.QuickTips.init();

@@ -7,8 +7,7 @@ Ext.define('PForm.view.Viewport', {
     layout: 'fit',
     
     requires: [
-        'PForm.view.mantenedor.paciente.Grid',
-        'PForm.view.mantenedor.paciente.Formulario'
+        'PForm.view.admin.Principal'
     ],
     
     initComponent: function() {
@@ -16,9 +15,9 @@ Ext.define('PForm.view.Viewport', {
         
         Ext.apply(me, {
             items: [
-                {
-                    xtype: 'pacientegrid'
-                }
+            {
+                xtype: 'adminprincipal'
+            }
             ]
         });
                 
