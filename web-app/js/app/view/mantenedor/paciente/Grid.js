@@ -10,44 +10,56 @@ Ext.define('PForm.view.mantenedor.paciente.Grid' ,{
     store: 'Pacientes',
 
     columns: [{
-    	header: "NOME",
-		width: 170,
-		flex:1,
+    	header: "Rut",
+		width: 90,
+		dataIndex: 'rut'
+	},{
+		header: "Nombre",
+		width: 180,
 		dataIndex: 'nombre'
 	},{
-		header: "TELEFONE",
-		width: 160,
-		flex:1,
-		dataIndex: 'phone'
+		header: "Apellido Paterno",
+		width: 180,
+		dataIndex: 'apellidoPaterno'
 	},{
-		header: "EMAIL",
-		width: 170,
-		flex:1,
-		dataIndex: 'email'
-	}],
+        header: "Apellido Materno",
+        width: 180,
+        dataIndex: 'apellidoMaterno'
+    },{
+        header: "Fecha Nacimiento",
+        width: 140,
+        xtype:'datecolumn', 
+        format: 'd/m/Y',
+        dataIndex: 'fechaNacimiento'
+    },{
+        header: "Prevision",
+        width: 50,
+        flex:1,
+        dataIndex: 'prevision'
+    }],
 	
 	initComponent: function() {
 		
 		this.dockedItems = [{
             xtype: 'toolbar',
             items: [{
-                iconCls: 'icon-save',
+                iconCls: 'icon-add',
                 itemId: 'add',
-                text: 'Adicionar',
-                action: 'add'
+                text: 'Agregar',
+                action: 'agregar'
             },{
                 iconCls: 'icon-delete',
-                text: 'Excluir',
-                action: 'delete'
+                text: 'Eliminar',
+                action: 'eliminar'
             }]
         },
         {
             xtype: 'pagingtoolbar',
-            dock:'top',
+            dock:'bottom',
             store: 'Pacientes',
             displayInfo: true,
-            displayMsg: 'Mostrando Contatos {0} - {1} de {2}',
-            emptyMsg: "Nenhum contato encontrado."
+            displayMsg: 'Mostrando {0} - {1} de {2}',
+            emptyMsg: "No encontrado."
         }];
 		
 		this.callParent(arguments);

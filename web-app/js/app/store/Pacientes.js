@@ -8,10 +8,10 @@ Ext.define('PForm.store.Pacientes', {
     proxy: {
         type: 'ajax',
         api: {
-        	create: 'php/criaContato.php', 
-            read: 'paciente/lista',
-            update: 'php/atualizaContato.php',
-            destroy: 'php/deletaContato.php',
+        	create: 'paciente/save', 
+            read: 'paciente/list',
+            update: 'paciente/update',
+            destroy: 'paciente/delete',
         },
         reader: {
             type: 'json',

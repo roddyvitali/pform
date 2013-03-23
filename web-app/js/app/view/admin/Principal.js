@@ -10,7 +10,6 @@ Ext.define('PForm.view.admin.Principal', {
     ],
     defaults: {
         xtype: 'panel',
-        bodyPadding: 10,
         frame: true
     },
     title: 'Panel Administracion',

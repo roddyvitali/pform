@@ -9,7 +9,7 @@ Ext.define('PForm.view.mantenedor.paciente.Formulario', {
     autoShow: true,
     width: 480,
     modal: true,
-    iconCls: 'icon-user',
+    iconCls: 'icon-add',
     bodyPadding: 15,
 
     initComponent: function() {
@@ -23,6 +23,7 @@ Ext.define('PForm.view.mantenedor.paciente.Formulario', {
                 fieldDefaults: {
                     anchor: '100%',
                     labelAlign: 'left',
+                    labelWidth: 170,
                     allowBlank: false,
                     combineErrors: true,
                     msgTarget: 'side'
@@ -33,11 +34,12 @@ Ext.define('PForm.view.mantenedor.paciente.Formulario', {
 					    xtype: 'textfield',
 					    name : 'id',
 					    fieldLabel: 'id',
+                        allowBlank: true,
 					    hidden:true
 					},    
                     {
                         xtype: 'textfield',
-                        name : 'rut',
+                        name : 'nombre',
                         fieldLabel: 'Nombre'
                     },
                     {
@@ -58,7 +60,8 @@ Ext.define('PForm.view.mantenedor.paciente.Formulario', {
                     {
                         xtype: 'datefield',
                         name : 'fechaNacimiento',
-                        fieldLabel: 'Fecha Nacimiento'
+                        fieldLabel: 'Fecha Nacimiento',
+                        format: 'd/m/Y'
                     },
                     {
                         xtype: 'combo',
@@ -86,8 +89,8 @@ Ext.define('PForm.view.mantenedor.paciente.Formulario', {
             ui: 'footer',
             items: ['->', {
                 iconCls: 'icon-save',
-                text: 'Salvar',
-                action: 'save'
+                text: 'Grabar',
+                action: 'grabar'
             },{
                 iconCls: 'icon-reset',
                 text: 'Cancelar',

@@ -10,10 +10,19 @@ Ext.define('PForm.view.admin.MenuTop', {
                 text: 'Mantenedores',
                 menu: [{
                     text:'Paciente',
+                    iconCls: 'icon-grid',
                     action: 'ac_mpaciente'
                 }]
             }, 
             '-',
+            {
+                xtype: 'button',
+                text: 'Informes',
+                menu: [{
+                    text:'Embarazo Inicial',
+                    iconCls: 'icon-grid'
+                }]
+            },
             '->', 
             {
                 xtype: 'combo'

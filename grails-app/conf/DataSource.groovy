@@ -5,6 +5,12 @@ dataSource {
     username = "postgres"
     password = "postgres"
 }
+/*
+ * in mac open server
+ * export PATH=/Library/PostgreSQL/8.4/bin:$PATH
+ * sudo -u postgres postgres -D /Library/PostgreSQL/8.4/data
+ * 
+ */
 hibernate {
     cache.use_second_level_cache = true
     cache.use_query_cache = false

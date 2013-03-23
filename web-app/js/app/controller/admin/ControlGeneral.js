@@ -21,9 +21,11 @@ Ext.define('PForm.controller.admin.ControlGeneral', {
         });
     },
     ac_mpaciente: function(){
-        console.log(1)
-        var view = this.getMenuTop();
-        console.log(view)
+        var main = Ext.ComponentQuery.query('viewport > adminprincipal')[0];
+        var view = Ext.create('PForm.view.mantenedor.paciente.Grid', {
+        });
+        main.removeAll();
+        main.add(view);
     },
     login: function(){
         var form = this.getLogin().getForm();
