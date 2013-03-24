@@ -11,7 +11,7 @@ Ext.define('PForm.store.Pacientes', {
         	create: 'paciente/save', 
             read: 'paciente/list',
             update: 'paciente/update',
-            destroy: 'paciente/delete',
+            destroy: 'paciente/delete'
         },
         reader: {
             type: 'json',

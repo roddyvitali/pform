@@ -5,7 +5,7 @@ Ext.define('PForm.controller.mantenedor.Pacientes', {
 
     models: ['Paciente'],
 
-    views: ['PForm.view.mantenedor.paciente.Formulario', 'PForm.view.mantenedor.paciente.Grid'],
+    views: ['mantenedor.paciente.Formulario', 'mantenedor.paciente.Grid'],
 
     refs: [{
             ref: 'pacientePanel',
@@ -80,7 +80,6 @@ Ext.define('PForm.controller.mantenedor.Pacientes', {
 		if (values.id > 0){
 			record.set(values);
             if(!this.validateModel(record, form)){
-                //me.getPacientesStore().reload();
                 return;   
             }
 
@@ -138,7 +137,6 @@ Ext.define('PForm.controller.mantenedor.Pacientes', {
                    buttons: Ext.MessageBox.OK,
                    icon: Ext.MessageBox.ERROR
                 });
-                me.getPacientesStore().remove(record);
             }
         });
     }

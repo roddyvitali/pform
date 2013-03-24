@@ -9,8 +9,7 @@ Ext.application({
         'admin.ControlGeneral'
     ],
     launch: function(){
-    	Ext.QuickTips.init();
-        Ext.Loader.setPath('PForm', '/js/');
+
     },
     autoCreateViewport: true
 });
